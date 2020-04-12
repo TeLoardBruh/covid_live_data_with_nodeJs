@@ -12,7 +12,7 @@ const viewDir = path.join(__dirname, '../templates/views');
 app.set('views', viewDir);
 app.use(express.static(pDir));
 
-app.set("port", process.env.PORT || 5000);
+app.set("port", process.env.PORT || 3000);
 
 
 

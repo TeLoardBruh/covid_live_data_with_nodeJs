@@ -7,13 +7,13 @@ const ctx = document.getElementById('myChart').getContext('2d');
 // data1.textContent = 'agag' ;
 
 fetch('https://covid19.mathdro.id/api/countries/cambodia').then(res => {
-    console.log(res.json().then((data) => {
+    (res.json().then((data) => {
         if (data.err) {
             para_1.textContent = data.err;
             console.log(data.err);
         } else {
 
-            console.log(data);
+            // console.log(data);
             data_confirmed.textContent = "Confirmed : " + data.confirmed.value;
             data_recovered.textContent = "Recovered : " + data.recovered.value;
             data_death.textContent = "Death : " + data.deaths.value;

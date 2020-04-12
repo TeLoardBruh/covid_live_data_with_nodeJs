@@ -11,7 +11,7 @@ const getBody = () => {
         if (err) {
             return console.log(err);
         }
-        console.log(url);
+        // console.log(url);
         const respsonse = await fetch(url);
         const toJs = await respsonse.json();
         // console.log(toJs);
