@@ -1,11 +1,18 @@
 const data_confirmed = document.querySelector('#case_confirmed');
 const data_recovered = document.querySelector('#case_recovered');
 const data_death = document.querySelector('#case_death');
+const data_date_now = document.querySelector('#date_now');
 const ctx = document.getElementById('myChart').getContext('2d');
 
-
 // data1.textContent = 'agag' ;
+var today = new Date();
+var dd = today.getDate();
 
+var mm = today.getMonth()+1; 
+var yyyy = today.getFullYear();
+
+today = mm+'-'+dd+'-'+yyyy;
+data_date_now.textContent = "Date : "+today;
 fetch('https://covid19.mathdro.id/api/countries/cambodia').then(res => {
     (res.json().then((data) => {
         if (data.err) {
@@ -56,3 +63,5 @@ fetch('https://covid19.mathdro.id/api/countries/cambodia').then(res => {
         }
     }));
 });
+
+
